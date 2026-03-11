@@ -52,7 +52,7 @@ public class AppConfig {
 
 #### @Autowired
 - 필드, setter 메서드, 생성자에 사용하며 타입에 따라 알아서 Bean을 주입해주는 역할을 한다.
-- 객체에 대한 의존성을 주입시킨다.
+- 객체에 대한 **의존성을 주입**시킨다.
 
 ##### 주입 방식에 따른 특징
 ```java
@@ -144,7 +144,7 @@ public class UserService {
 - 프로퍼티 파일을 환경변수로 로딩하게 해준다.
 
 #### @Lazy
-- 지연 로딩을 지원한다.
+- **지연 로딩**을 지원한다.
 - 실제로 사용될 때 스프링에서 Bean을 생성한다.
 
 #### @Value
@@ -156,8 +156,8 @@ public class UserService {
 #### @CookieValue
 - 쿠키 값을 파라미터로 전달 받고, 없으면 `500` 에러를 발생시킨다.
 
-#### CrossOrigin
-- CORS 보안상의 문제로 다른 origind의 AJAX 요청을 방지하기 위해 사용한다.
+#### @CrossOrigin
+- CORS 보안상의 문제로 다른 **origind의 AJAX 요청을 방지하기 위해** 사용한다.
 
 ```java
 @CrossOrigin(origins = "http://localhost:3000")
@@ -168,5 +168,15 @@ public List<User> getUsers() {
 ```
 - 개발 환경에서는 보통 전역 설정을 하지만, 운영 환경에서는 외부 파트너 api 호출 같은 경우 자주 사용된다.
 
-#### ModelAttirbute
-- 
+#### @ModelAttirbute
+- VIEW에서 전달해 준 파라미터를 DTO의 멤버 변수로 매핑해주는 어노테이션이다.
+- 태그의 `name` 값과 변수명이 일치해야 한다.
+
+#### @GetMapping
+```java
+@RequestMapping(value = "/users", method = RequestMethod.GET)
+public List<User> getUsers() {
+}
+```
+- 사실 위처럼 사용이 가능하지만, 가독성을 위해 `GET`,`POST`, `PUT`, `DELETE`로 사용한다.
+
