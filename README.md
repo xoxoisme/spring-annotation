@@ -147,3 +147,26 @@ public class UserService {
 - 지연 로딩을 지원한다.
 - 실제로 사용될 때 스프링에서 Bean을 생성한다.
 
+#### @Value
+- 프로퍼티에서 값을 가져와 적용할 때 사용한다.
+
+#### @RequestMapping
+- URL 요청이 들어오면 어떤 메서드가 처리할 지 매핑해주는 어노테이션이다.
+
+#### @CookieValue
+- 쿠키 값을 파라미터로 전달 받고, 없으면 `500` 에러를 발생시킨다.
+
+#### CrossOrigin
+- CORS 보안상의 문제로 다른 origind의 AJAX 요청을 방지하기 위해 사용한다.
+
+```java
+@CrossOrigin(origins = "http://localhost:3000")
+@GetMapping("/users")
+public List<User> getUsers() {
+    return userService.findAll();
+}
+```
+- 개발 환경에서는 보통 전역 설정을 하지만, 운영 환경에서는 외부 파트너 api 호출 같은 경우 자주 사용된다.
+
+#### ModelAttirbute
+- 
