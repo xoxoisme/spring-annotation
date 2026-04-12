@@ -312,3 +312,9 @@ public List<User> getUsers() {
 - SpringBootApplication 위에 적어준다.
 - 그리고 `@Entitylisteners(AuditingEntityListener.class)`를 해당 엔티티에 써준다.
 - 보통 BaseEntity를 만들어 상속하여 사용한다.(중복 코드 제거)
+
+---
+
+#### @MappedSuperclass
+- 객체의  입장에서  공통 매핑 정보가 필요할 때 사용한다.
+- 부모 클래스에 선언하고 상속 받아서 사용한다.
