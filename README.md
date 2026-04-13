@@ -312,9 +312,13 @@ public List<User> getUsers() {
 - SpringBootApplication 위에 적어준다.
 - 그리고 `@Entitylisteners(AuditingEntityListener.class)`를 해당 엔티티에 써준다.
 - 보통 BaseEntity를 만들어 상속하여 사용한다.(중복 코드 제거)
-
 ---
 
 #### @MappedSuperclass
 - 객체의  입장에서  공통 매핑 정보가 필요할 때 사용한다.
 - 부모 클래스에 선언하고 상속 받아서 사용한다.
+
+#### @EntityListeners
+- 엔티티에 이벤트 리스너를 등록하는 데 사용한다.
+- JPA에서 제공하는 엔티티 감사 기능을 위한 리스너이다.
+- 해당 리스너를 통해 엔티티의 생성, 수정 시간 등 자동 기록이 가능하다.
