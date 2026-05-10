@@ -26,6 +26,11 @@
 - Spring Application Context를 만들 때 자동으로 설정하는 기능을 켠다.
 - 만약 `tomcat-embed-core.jar`가 존재하면 톰캣 서버가 setting된다.
 
+#### @Component
+
+- 해당 클래스를 Spring이 관리하는 빈으로 등록하는 어노테이션이다.
+- `@RequiredArgsConstructor`로 DI 주입할 수 있다.
+
 #### @ComponentScan
 - `@Component`, `@Service`, `@Repository`, `@Controller`, `@Configuration`이 붙은 빈들을 찾아서 Context에 빈을 등록해 주는 어노테이션이다.
 - bean 인스턴스를 생성한다.
