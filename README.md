@@ -233,6 +233,8 @@ public List<User> getUsers() {
 #### @Transactional
 - DB 트랜잭션을 설정하고 싶은 메서드에 어노테이션을 적용하면 me메서드thod 내부에서 일어나는 DB 로직이 전부 성공하게되거나 DB 접근중 하나라도 실패하면, 다시 롤백할 수 있게 해주는 어노테이션이다.
 - 주로 Service에서 관리한다.
+- `import jakrta`가 아닌 `springframework`에는 `(readOnly = true)`를 사용해 조회 시 성능 향상을 할 수 있다.
+- 다만, 이 때 생성이나 수정의 경우 따로 `@Transactional`을 붙이면 된다.
 
 #### @Cacheable
 - 메서드 앞에 지정하면 해당 메서드를 처음 호출하면 캐시에 적재하고, 그 다음 부터는 캐시에서 결과를 가져와 메서드 호출을 줄여주는 어노테이션이다.
