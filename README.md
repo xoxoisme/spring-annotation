@@ -258,10 +258,6 @@ public List<User> getUsers() {
 #### @Scheduled
 - 정해진 시간에 메서드를 실행하게 하는 기능이다.
 
----
-
-### Lombok Annotation
-
 #### @NoArgsConstructor
 - 기본 생성자를 자동으로 추가한다.
 - 엔티티 객체를 아무데서나 생성하지 못하게 막고, JPA만 생성할 수 있게 하기 위해 사용한다.
@@ -292,10 +288,6 @@ public List<User> getUsers() {
 #### @Data
 - `@Getter`,  `@Setter`,  `@EqualsAndHashCode`,  `@AllArgsConstructor`을 포함한 Lombok에서 제공하는 필드와 관련된 모든 코드를 생성한다.
 - 보통, DTO에 많이 사용된다.
-
----
-
-### JPA Annotation
 
 #### @Entity
 - 실제 DB 테이블과 매핑될 클래스임을 나타낸다.
@@ -337,3 +329,8 @@ public List<User> getUsers() {
 
 #### @JoinColumn
 - 어떤 외래키로 매핑할 지 지정해주는 어노테이션이다.
+
+#### @EnableWebSecurity
+
+- Spring Security의 기능을 활성화한다.
+- WebSecurityConfigurerAdaptor를 상속받은 설정 클래스를 등록할 수 있다.
