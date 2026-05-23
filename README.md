@@ -334,3 +334,8 @@ public List<User> getUsers() {
 
 - Spring Security의 기능을 활성화한다.
 - WebSecurityConfigurerAdaptor를 상속받은 설정 클래스를 등록할 수 있다.
+
+#### @Aspect
+
+- AOP에서 부가 기능을 모듈화한 클래스를 선언할 때 사용하는 어노테이션이다.
+- 
